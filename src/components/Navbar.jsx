@@ -1,12 +1,13 @@
 import { useState } from "react";
 import assets from "../assets/assets";
+import ThemeToggleBtn from "./ThemeToggleBtn";
 const Navbar = ({ theme, setTheme }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <div
       className="flex justify-between items-start px-4 sm:px-12
-       lg:px-24 xl:px-40 py-4 sticky top-0 z-20 backdrop-blur-xl 
+       lg:px-24 xl:px-40 py-6 sticky top-0 z-20 backdrop-blur-xl 
        font-medium bg-white/50 dark:bg-gray-900/70
     "
     >
@@ -33,16 +34,32 @@ const Navbar = ({ theme, setTheme }) => {
           alt=""
         />
 
-        <a href="#" className="sm:hover:border-b">
+        <a
+          href="#"
+          className="sm:hover:border-b"
+          onClick={() => setSidebarOpen(false)}
+        >
           Home
         </a>
-        <a href="#services" className="sm:hover:border-b">
+        <a
+          href="#services"
+          className="sm:hover:border-b"
+          onClick={() => setSidebarOpen(false)}
+        >
           Services
         </a>
-        <a href="#our-work" className="sm:hover:border-b">
+        <a
+          href="#our-work"
+          className="sm:hover:border-b"
+          onClick={() => setSidebarOpen(false)}
+        >
           Our Work
         </a>
-        <a href="#contact-us" className="sm:hover:border-b">
+        <a
+          href="#contact-us"
+          className="sm:hover:border-b"
+          onClick={() => setSidebarOpen(false)}
+        >
           Contact Us
         </a>
       </div>
@@ -53,6 +70,7 @@ const Navbar = ({ theme, setTheme }) => {
           className="w-8 sm:hidden"
           alt=""
         />
+        <ThemeToggleBtn theme={theme} setTheme={setTheme} />
         <a
           href="#contact-us"
           className="text-sm   max-sm:hidden
