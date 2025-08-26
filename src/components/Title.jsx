@@ -2,7 +2,7 @@
 
 const Title = ({title, description}) => {
   return (
-    <div className="flex flex-col items-center gap-4 ">
+    <div className="flex flex-col items-center gap-4 dark:text-white">
       <h3 className="text-3xl sm:text-5xl font-medium mt-8">
        {title}
       </h3>

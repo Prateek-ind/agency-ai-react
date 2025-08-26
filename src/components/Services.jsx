@@ -1,6 +1,4 @@
-import React from "react";
 import assets from "../assets/assets";
-import Service from "./ServiceCard";
 import Title from "./Title";
 import ServiceCard from "./ServiceCard";
 
@@ -34,8 +32,8 @@ const Services = () => {
   return (
     <div
       id="services"
-      className="relative flex flex-col items-center py-24 lg:py-40
-    gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 text-gray-700 dar:text-white
+      className="relative flex flex-col items-center pt-30
+    gap-7 px-4 sm:px-12 lg:py-40 lg:px-24 xl:px-40 text-gray-700 dark:text-white
     "
     >
       <img
@@ -49,9 +47,11 @@ const Services = () => {
         business forward."
       />
 
-      {servicesData.map((service, i) => (
-        <ServiceCard key={i} service={service} />
-      ))}
+      <div className="flex flex-col md:grid md:grid-cols-2 gap-6">
+        {servicesData.map((service, i) => (
+          <ServiceCard key={i} service={service} index={i} />
+        ))}
+      </div>
     </div>
   );
 };
