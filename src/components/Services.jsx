@@ -33,7 +33,7 @@ const Services = () => {
     <div
       id="services"
       className="relative flex flex-col items-center pt-30
-    gap-7 px-4 sm:px-12 lg:py-40 lg:px-24 xl:px-40 text-gray-700 dark:text-white
+    gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 text-gray-700 dark:text-white
     "
     >
       <img
