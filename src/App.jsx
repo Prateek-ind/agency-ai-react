@@ -7,7 +7,7 @@ import OurWork from "./components/OurWork";
 import Teams from "./components/Teams";
 import ContactUs from "./components/ContactUs";
 import { Toaster } from "react-hot-toast";
-
+import Footer from "./components/Footer";
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <main className="dark:bg-black relative">
-      <Toaster/>
+      <Toaster />
       <Navbar theme={theme} setTheme={setTheme} />
       <Hero />
       <TrustedBy />
@@ -24,6 +24,7 @@ const App = () => {
       <OurWork />
       <Teams />
       <ContactUs />
+      <Footer theme={theme}/>
     </main>
   );
 };
