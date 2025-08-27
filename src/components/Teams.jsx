@@ -5,9 +5,9 @@ import Title from "./Title";
 const Teams = () => {
   return (
     <div
-      className=' className=" flex flex-col items-center pt-30
+      className="flex flex-col items-center pt-30
     gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 text-gray-700 dark:text-white
-    "'
+    "
     >
       <Title
         title="Meet the team"
