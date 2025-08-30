@@ -62,9 +62,11 @@ const Footer = ({ theme }) => {
           </div>
         </div>
       </div>
-      <div className="w-full border-[0.5px] border-gray-100 dark:border-gray-700 mt-4 mb-4"></div>
+      <div className="w-full border-[0.5px] border-gray-400 dark:border-gray-700 mt-4 mb-4"></div>
       <div className="flex justify-between text-gray-700 dark:text-gray-500 mt-4">
-        <p className="text-sm">Copyright 2025 © GreatStack - All Right Reserved.</p>
+        <p className="text-sm">
+          Copyright 2025 © GreatStack - All Right Reserved.
+        </p>
         <div className="flex gap-5">
           <img src={assets.twitter_icon} alt="" />
           <img src={assets.facebook_icon} alt="" />

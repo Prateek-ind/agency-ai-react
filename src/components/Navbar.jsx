@@ -11,11 +11,13 @@ const Navbar = ({ theme, setTheme }) => {
        font-medium bg-white/50 dark:bg-gray-900/70
     "
     >
-      <img
-        src={theme === "dark" ? assets.logo_dark : assets.logo}
-        className="w-32 sm:w-40"
-        alt=""
-      />
+      <a href="#">
+        <img
+          src={theme === "dark" ? assets.logo_dark : assets.logo}
+          className="w-32 sm:w-40"
+          alt=""
+        />
+      </a>
       <div
         className={`text-grey-700 dark:text-white sm:text-sm 
       ${
