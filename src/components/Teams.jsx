@@ -16,6 +16,7 @@ const Teams = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
         {teamData.map((member) => (
           <TeamMember
+            key={member.name}
             image={member.image}
             name={member.name}
             title={member.title}
