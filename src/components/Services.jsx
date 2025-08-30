@@ -1,6 +1,7 @@
 import assets from "../assets/assets";
 import Title from "./Title";
 import ServiceCard from "./ServiceCard";
+import { motion } from "motion/react";
 
 const Services = () => {
   const servicesData = [
@@ -30,7 +31,11 @@ const Services = () => {
   ];
 
   return (
-    <div
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{staggerChildren: 0.2}}
       id="services"
       className="relative flex flex-col items-center pt-30
     gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 text-gray-700 dark:text-white
@@ -49,10 +54,10 @@ const Services = () => {
 
       <div className="flex flex-col md:grid md:grid-cols-2 gap-6">
         {servicesData.map((service, i) => (
-          <ServiceCard key={i} service={service} index={i} />
+          <ServiceCard key={i} index={i} service={service} index={i} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
