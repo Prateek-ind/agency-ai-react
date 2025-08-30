@@ -1,7 +1,7 @@
-import React from "react";
 import Title from "./Title";
 import assets from "../assets/assets";
 import Work from "./Work";
+import { motion } from "motion/react";
 
 const OurWork = () => {
   const workData = [
@@ -25,7 +25,11 @@ const OurWork = () => {
   ];
 
   return (
-    <section
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ staggerChildren: 0.2 }}
       id="our-work"
       className=" flex flex-col items-center pt-30
     gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 text-gray-700 dark:text-white
@@ -40,7 +44,11 @@ const OurWork = () => {
      gap-6 w-full max-w-5xl"
       >
         {workData.map((work, i) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: i * 0.2 }}
+            viewport={{ once: true }}
             key={i}
             className="hover:scale-102 duration-500 transition-all
                          cursor-pointer "
@@ -50,10 +58,10 @@ const OurWork = () => {
               image={work.image}
               description={work.description}
             />
-          </div>
+          </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 
